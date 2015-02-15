@@ -133,7 +133,7 @@ select                      { }
 
 
 #main{
- position: fixed;
+ 
 z-index: 4;
 display: block;
 top: 0;
@@ -146,6 +146,7 @@ overflow: hidden;
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
 #main{
 left: 250px;
+position:fixed;
 
 }
 }
@@ -154,7 +155,7 @@ left: 250px;
 @media only screen and (min-width: $breakpoint-xl) {
 #main{
 
-
+position:fixed;
 left: 250px;
 
 

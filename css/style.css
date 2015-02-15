@@ -481,7 +481,6 @@ input[placeholder],
   margin-bottom: 20px; }
 
 #main {
-  position: fixed;
   z-index: 4;
   display: block;
   top: 0;
@@ -489,10 +488,12 @@ input[placeholder],
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   #main {
-    left: 250px; } }
+    left: 250px;
+    position: fixed; } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   #main {
+    position: fixed;
     left: 250px; } }
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
