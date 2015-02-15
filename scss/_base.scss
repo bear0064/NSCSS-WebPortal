@@ -127,3 +127,16 @@ select                      { }
 
 }
 
+#startHere{
+    margin-bottom: 20px;
+}
+
+
+#main{
+ position: fixed;
+z-index: 4;
+display: block;
+top: 0;
+overflow: hidden;
+left: 250px;   
+}

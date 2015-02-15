@@ -1,12 +1,44 @@
-.site-navigation {
-
-	> ul {
-
-		> li {
-
-			> a { }
-		}
-	}
-
+#main-nav {
+    padding-top: 120px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    cursor: default;
+    background: #fcfcf1;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    
 }
 
+.service-select-nav{
+ text-decoration: none;
+    line-height: 50px;
+    text-align: left;
+    margin-left: 10px; 
+}
+
+.service-select-nav a{
+       color:#000;   
+}
+
+.service-select-nav a:visited{
+       color:#000;
+}
+
+.service-select-nav a:active{
+       color:#fba81a;
+}
+
+.service-select-nav a:hover{
+       color:#fba81a;
+}
+
+
+
+.service-select-nav span{
+ color:red;   
+}

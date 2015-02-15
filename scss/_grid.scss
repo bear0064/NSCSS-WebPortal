@@ -5,19 +5,19 @@
 
 .col-container {
     @extend .clearfix;
+    
 }
 
 
 .col-1 {
-    padding-top: 87px;
+    padding-top: 120px;
     text-align: center;
+    }
 
-}
 
 .category {
     width: 100%;
     padding: 5px 0 5px 0;
-
 }
 /* Custom, iPhone Retina */
 
@@ -60,7 +60,7 @@
         
         display: inline-block;
         width: 15%;
-        padding: 5px;
+        padding: 10px;
 
         
     }
