@@ -100,7 +100,7 @@ select                      { }
      filter: grayscale(0);
 
     transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
-    transition-duration: 3s;
+    transition-duration: 2s;
     
 }
 
@@ -138,5 +138,29 @@ z-index: 4;
 display: block;
 top: 0;
 overflow: hidden;
-left: 250px;   
+   
 }
+
+
+
+@media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+#main{
+left: 250px;
+
+}
+}
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: $breakpoint-xl) {
+#main{
+
+
+left: 250px;
+
+
+
+}
+}
+
+
+

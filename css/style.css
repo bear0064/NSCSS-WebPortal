@@ -457,7 +457,7 @@ input[placeholder],
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
-  transition-duration: 3s; }
+  transition-duration: 2s; }
 
 .overlay {
   position: absolute;
@@ -485,9 +485,15 @@ input[placeholder],
   z-index: 4;
   display: block;
   top: 0;
-  overflow: hidden;
-  left: 250px; }
+  overflow: hidden; }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #main {
+    left: 250px; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  #main {
+    left: 250px; } }
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
 .wrapper {
@@ -650,7 +656,8 @@ nav {
   left: 0;
   width: 250px;
   height: 100%;
-  text-align: center; }
+  text-align: center;
+  display: none; }
 
 .service-select-nav {
   text-decoration: none;
@@ -673,6 +680,13 @@ nav {
 .service-select-nav span {
   color: red; }
 
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #main-nav {
+    display: block; } }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  #main-nav {
+    display: block; } }
 /* = Footer
 -------------------------------------------------------------------------------------------------------------------- */
 /* = Print
