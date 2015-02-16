@@ -525,11 +525,11 @@ picture:hover {
   text-align: center; }
 
 .warning p {
-  max-width: 350px;
+  max-width: 400px;
   margin: 0 auto; }
 
 #storeCons {
-  padding-top: 20px; }
+  padding-top: 10px; }
 
 #storeCons img {
   max-width: 300px;
