@@ -6,8 +6,6 @@ $(document).ready(function () {
     });
 
 
-    var winWidth = $(window).width();
-    if (winWidth >= 768) {
         $(".category").click(function () {
             event.preventDefault();
 
@@ -26,7 +24,7 @@ $("#main").animate({"left":"250px"}, "slow");
 
 
         });
-    }
+    
 
 
 
