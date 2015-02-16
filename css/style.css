@@ -603,7 +603,7 @@ header {
   right: 0;
   margin: 0 auto;
   padding: 20px 0;
-  width: 200px;
+  width: 600px;
   z-index: 1; }
 
 .section-title p {
@@ -682,16 +682,23 @@ nav {
     display: none; }
 
   #location-nav {
-    background-image: url(../img/hamburger.svg) no-repeat;
-    display: block; } }
+    display: block; }
+
+  .section-title {
+    width: 500px; }
+
+  .section-title p {
+    font-size: 40px; } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   .menu {
     display: none; }
 
   #location-nav {
-    background-image: url(../img/hamburger.svg) no-repeat;
-    display: block; } }
+    display: block; }
+
+  .section-title {
+    width: 600px; } }
 /* = Main Navigation
 -------------------------------------------------------------------------------------------------------------------- */
 #main-nav {
@@ -707,7 +714,8 @@ nav {
   width: 250px;
   height: 100%;
   text-align: center;
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 .service-select-nav {
   text-decoration: none;

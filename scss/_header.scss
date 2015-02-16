@@ -1,175 +1,153 @@
-header{
-background:#c6d6d9;
-width:100%;
-height:100px;
--webkit-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    0px -1px 30px rgba(50, 50, 50, 0.75);
-box-shadow:         0px -1px 30px rgba(50, 50, 50, 0.75);
-position: fixed;
-z-index: 6;
-}
-
-
-#logo{
-display: block;
-width: 100px;
-float:left;    
-margin-left: 5%;
-
-}
-
-.logoPlace{
-
-}
-
-.section-title{
-    
-    text-align: center; 
+header {
+    background: #c6d6d9;
+    width: 100%;
+    height: 100px;
+    -webkit-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
     position: fixed;
-    left:0;
-    right:0;
-    margin:0 auto;
+    z-index: 6;
+}
+
+#logo {
+    display: block;
+    width: 100px;
+    float: left;
+    margin-left: 5%;
+}
+
+.logoPlace {}
+
+.section-title {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     padding: 20px 0;
-    width: 200px;
+    width: 600px;
     z-index: 1;
 }
 
-.section-title p{
+.section-title p {
     font-size: 47px;
-    
-    
 }
 
 .geoPin {
- max-width: 50px;
-    float:left;
+    max-width: 50px;
+    float: left;
     display: block;
 }
 
 .menu {
     display: none;
-    float:right;
-    
+    float: right;
 }
 
-#location-nav{
+#location-nav {
     display: none;
     z-index: 10;
-    float:right;
-    margin:30px 75px;
-    width:220px;
+    float: right;
+    margin: 30px 75px;
+    width: 220px;
 }
-#location-nav>p{
+
+#location-nav>p {
     font-size: 20px;
     margin: 10px 0 0 0;
 }
 
-
-nav{
-	height: 440px;
-	width: 300px;
-	text-decoration: none;
+nav {
+    height: 440px;
+    width: 300px;
+    text-decoration: none;
     text-align: center;
-	position: fixed;
-	right: 0;
+    position: fixed;
+    right: 0;
     margin-top: 100px;
     background: #154d26;
     -webkit-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    0px -1px 30px rgba(50, 50, 50, 0.75);
-box-shadow:         0px -1px 30px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
     z-index: 5;
-    display:none;
-}
-
-
-
-.menu li{
-    list-style-type: none;   
-    line-height: 40px;
-}
-
-.menu li:hover{
-        background-color:#fba81a;
-      
-}
-
-
-.menu a{
-color:#fcfcf1;
-}
-
-.menu a:visited{
-       color:#fcfcf1;
-}
-
-.menu a:active{
-       color:#fba81a;
-}
-
-.menu a:hover{
-       color:#fcfcf1;
-}
-
-
-
-.language{
-position: fixed;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    color:#fba81a;
-}
-
-.language a{
-     color:#fba81a;   
-}
-
-
-
-/* Custom, iPhone Retina */
-
-@media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-
-    
-}
-
-/* Extra Small Devices, Phones */
-
-@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
-
-}
-/* Small Devices, Tablets */
-
-@media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
-
-}
-/* Medium Devices, Desktops */
-
-@media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-
-    .menu {
     display: none;
 }
 
-#location-nav{
-    background-image: url(../img/hamburger.svg) no-repeat;
-    display: block;
+.menu li {
+    list-style-type: none;
+    line-height: 40px;
 }
+
+.menu li:hover {
+    background-color: #fba81a;
+}
+
+.menu a {
+    color: #fcfcf1;
+}
+
+.menu a:visited {
+    color: #fcfcf1;
+}
+
+.menu a:active {
+    color: #fba81a;
+}
+
+.menu a:hover {
+    color: #fcfcf1;
+}
+
+.language {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    color: #fba81a;
+}
+
+.language a {
+    color: #fba81a;
+}
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {}
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {}
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {}
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+    .menu {
+        display: none;
+    }
+    #location-nav {
+        display: block;
+    }
+    .section-title {
+        width: 500px;   
+    }
     
     
+//Not sure how im going to handle this.    
+    .section-title p{
+    font-size: 40px;
+        
+    }
 }
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: $breakpoint-xl) {
-
     .menu {
-    display: none ;
+        display: none;
+    }
+    #location-nav {
+        display: block;
+    }
+    .section-title {
+        width: 600px;
+    }
 }
-
-#location-nav{
-    background-image: url(../img/hamburger.svg) no-repeat;
-    display: block;
-}
-    
-}
-
