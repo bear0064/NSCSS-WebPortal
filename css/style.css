@@ -519,7 +519,7 @@ picture:hover {
     left: 0; } }
 .warning {
   position: fixed;
-  top: 100px;
+  top: 0px;
   left: 0;
   right: 0;
   text-align: center;
