@@ -161,17 +161,17 @@ picture:hover {
     transition-duration: 1s;
 }
 
-.overlay {
+
+
+.overlay{
     position: absolute;
-    z-index: 1;
-    margin: 0 auto;
-    top: 0;
     left: 0;
     right: 0;
+    top: 0;
     bottom: 0;
-    height: auto;
-    padding: 33px;
+    overflow: hidden;
 }
+
 
 .overlay p {
     font-family: $font-third;
@@ -179,6 +179,7 @@ picture:hover {
     color: #fcfcf1;
     font-weight: 200;
     font-size: 30px;
+    
 }
 
 #startHere {
@@ -239,4 +240,16 @@ picture:hover {
         //left: 250px;
         left:0;
     }
+}
+
+
+
+img { 
+    image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+    
 }
