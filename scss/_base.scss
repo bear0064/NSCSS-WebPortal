@@ -1,167 +1,242 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+
 html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 
-body { 
-  font-size: 1em;
-  font-family: $font-primary;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%; 
-  -ms-text-size-adjust: 100%; 
-  text-size-adjust: 100%; 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-size: 1em;
+    font-family: $font-primary;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
 /* =Links */
-a           {   text-decoration: none;
- }
-a:hover     {  }
-a:focus     {  }
-a:hover, 
-a:active    {  }
 
-img     { vertical-align: middle; max-width: 100%; height: auto; }
-hr      { border-top: 1px solid #ccc; display: block; height: 1px; border: 0; margin: 1em 0; padding: 0; }
+a {
+    text-decoration: none;
+}
 
-h1, h2, h3, h4, h5 ,h6 { }
+a:hover {}
 
-h1 { }
-h2 { }
-h3 { }
-h4 { }
-h5 { }
-h6 { }
+a:focus {}
 
-ul, ol, dl  { }
-p           { }
-ul          { }
+a:hover,
+a:active {}
 
-strong { }
-em { }
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+ul,
+ol,
+dl {}
+
+p {}
+
+ul {}
+
+strong {}
+
+em {}
 
 @media only screen and (min-width: $breakpoint-xl) {
-  h1 {  }
+    h1 {}
 }
-
 /* =Forms
 ------------------------------------------------------ */
-fieldset        {  }
-fieldset legend {  }
+
+fieldset {}
+
+fieldset legend {}
 
 button,
 input,
 select,
-textarea { }
-textarea { }
+textarea {}
 
-::-webkit-input-placeholder { color: #000000; }
-:-moz-placeholder           { color: #000000; }
-::-moz-placeholder          { color: #000000; }
-:-ms-input-placeholder      { color: #000000; }
+textarea {}
+
+::-webkit-input-placeholder {
+    color: #000000;
+}
+
+:-moz-placeholder {
+    color: #000000;
+}
+
+::-moz-placeholder {
+    color: #000000;
+}
+
+:-ms-input-placeholder {
+    color: #000000;
+}
+
 input[placeholder],
-[placeholder]               { color: #000000; }
-
-
+[placeholder] {
+    color: #000000;
+}
 /* = Form Input Styles
 ---------------------------- */
-input { }
-input[type="text"] {  }
-input[type="checkbox"] {  }
-input[type="radio"] {  }
-input[type="submit"] {  }
-textarea {  }
 
-select                      { }
+input {}
 
+input[type="text"] {}
 
+input[type="checkbox"] {}
+
+input[type="radio"] {}
+
+input[type="submit"] {}
+
+textarea {}
+
+select {}
 /* text overlay */
 
 .category {
-    height:auto;
+    height: auto;
     margin: auto;
-    text-align:center;
-    position:relative;
+    text-align: center;
+    position: relative;
     z-index: 1;
     -webkit-filter: grayscale(1);
-}
-
-.category:hover {
-     -moz-filter: grayscale(0);
-     -ms-filter: grayscale(0);
-     -o-filter: grayscale(0);
-     -webkit-filter: grayscale(0);
-     filter: grayscale(0);
-
-    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
-    transition-duration: 2s;
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    filter: grayscale(1);
     
 }
 
-
+.category:hover,
+picture:hover {
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1s;
+}
 
 .overlay {
     position: absolute;
     z-index: 1;
-    margin: auto;
+    margin: 0 auto;
     top: 0;
-    left:0;
-    right:0;
-    bottom:0;
-    height:auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    padding: 33px;
 }
+
 .overlay p {
     font-family: $font-third;
     text-align: center;
     color: #fcfcf1;
     font-weight: 200;
     font-size: 30px;
-    padding: 33px;
-    
-
 }
 
-#startHere{
+#startHere {
+    
     margin-bottom: 20px;
 }
 
-
-#main{
- 
-z-index: 4;
-display: block;
-top: 0;
-overflow: hidden;
-   
+#main {
+    z-index: 4;
+    display: block;
+    top: 0;
+    overflow: hidden;
 }
 
+@media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+    .overlay{
+        padding: 33px 0 33px 0;
+    }
+}
+/* Extra Small Devices, Phones */
 
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
+    .overlay{
+        padding: 60px 0 60px 0;
+    }
+}
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
+    .overlay {
+        padding: 100px 0 100px 0;
+        
+    }
+}
+/* Medium Devices, Desktops */
 
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-#main{
-left: 250px;
-position:fixed;
+    .overlay {
+        padding: 33px 0px 33px 0px;
 
-}
+    }
+    #main {
+        //left: 250px;
+        left:0;
+        position: fixed;
+    }
 }
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: $breakpoint-xl) {
-#main{
+    .overlay p {
+        padding: 33px 0 33px 0;
+            
 
-position:fixed;
-left: 250px;
-
-
-
+    }
+    #main {
+        position: fixed;
+        //left: 250px;
+        left:0;
+    }
 }
-}
-
-
-

@@ -17,7 +17,7 @@
 
 .service-select-nav{
  text-decoration: none;
-    line-height: 50px;
+    line-height: 40px;
     text-align: left;
     margin-left: 10px; 
 }
@@ -45,18 +45,51 @@
 }
 
 
-@media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-#main-nav {
-    display:block;
+#secondary-select-nav{
+    padding-top: 40px;
+}
+#search{
+    text-align: center;
+}
+#social-media{
+    text-align: center;
 }
 
+
+
+/* sliding line*/
+
+.service-select-nav a{
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 3px solid black;    
+    width: 20px;
+    transition: 0.5s ease;
+    white-space: nowrap;
+    height: 35px;
+}
+.service-select-nav a:hover {
+    border-bottom: 3px solid black;
+    width: 230px;
+}
+
+
+
+@media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
+#main-nav {
+    display:none;
+}
+#main{
+ left: 0;   
+}
 }
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: $breakpoint-xl) {
 #main-nav {
-display: block;
-    
+display: none;
 }
-
+#main{
+ left:0;   
+}
 }

@@ -17,11 +17,18 @@
 
 .category {
     width: 100%;
+    
     padding: 5px 0 5px 0;
 }
 /* Custom, iPhone Retina */
 
-@media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {}
+@media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
+.category {
+max-height:100px;
+padding: 5px 0 5px 0;
+}
+
+}
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
@@ -49,8 +56,10 @@
     .category {
         
         display: inline-block;
+        max-width: 230px;
         width: 15%;
         padding: 5px;
+        
     }
 }
 /* Large Devices, Wide Screens */
@@ -59,9 +68,11 @@
     .category {
         
         display: inline-block;
+        //width: 15%;
+        max-width: 230px;
         width: 15%;
         padding: 10px;
-
+        
         
     }
 }
