@@ -519,11 +519,10 @@ picture:hover {
     left: 0; } }
 .warning {
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
   right: 0;
-  text-align: center;
-  margin: 15px; }
+  text-align: center; }
 
 .warning p {
   max-width: 350px;

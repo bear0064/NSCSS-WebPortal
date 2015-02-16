@@ -247,13 +247,13 @@ picture:hover {
 
 .warning{
     position: fixed;
-    top:0px;
+    top:0;
     
     left: 0;
     right: 0;
     
     text-align: center;
-    margin:15px;
+    //margin:15px;
 }
 .warning p {
     max-width: 350px;
