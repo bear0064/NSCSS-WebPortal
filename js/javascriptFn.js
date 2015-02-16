@@ -5,7 +5,18 @@ $(document).ready(function () {
         $(".menu").slideToggle();
     });
 
-
+/* just an idea here
+var width = 992;
+$(window).resize(function(){
+   if($(this).width() <= width){
+      width = $(this).width();
+$("#main-nav").hide(); 
+   }
+});
+  */  
+    
+    
+  
         $(".category").click(function () {
             event.preventDefault();
 

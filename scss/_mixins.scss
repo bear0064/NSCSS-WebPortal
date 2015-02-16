@@ -56,3 +56,28 @@ Mixins & Extensions
 	background-image: -o-linear-gradient(top, $from, $to);
 	background-image: linear-gradient(to bottom, $from, $to);
 }
+
+//------------//
+//ghost button
+//
+//------------//
+
+@mixin ghost-button($font, $font-size, $font-color, $border-size, $border-color, $padding, $transition-speed, $hover-color)
+ {
+ display:inline-block;
+ text-decoration:none;
+ text-transform:uppercase;
+ font-family: $font;
+ font-size: $font-size;
+ color:$font-color;
+ border:$border-size solid $border-color;
+ padding:$padding;
+ -webkit-transition: color $transition-speed, background $transition-speed;
+ transition: color $transition-speed, background $transition-speed;
+ &:hover
+ {
+ background:$border-color;
+ color:$hover-color;
+ }
+ }
+

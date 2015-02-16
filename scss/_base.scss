@@ -137,8 +137,7 @@ select {}
 /* text overlay */
 
 .category {
-    height: auto;
-    margin: auto;
+    margin: inherit;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -147,6 +146,7 @@ select {}
     -ms-filter: grayscale(1);
     -o-filter: grayscale(1);
     filter: grayscale(1);
+    
     
 }
 
@@ -170,6 +170,7 @@ picture:hover {
     top: 0;
     bottom: 0;
     overflow: hidden;
+    
 }
 
 
@@ -269,4 +270,44 @@ picture:hover {
     max-width: 300px; 
     max-height: 40px;
     
+}
+
+#search{
+ 
+    
+
+}
+
+
+
+/* Search Box*/
+
+
+form {
+                width: 250px;
+                margin:0 auto;
+}
+.searchFeild {
+                width:150px;
+                padding:4px 10px;
+                background:rgba(50, 50, 50, 0);
+                border:1px solid #000;
+}
+.searchButton {
+                width:50px;
+                position:relative;
+                padding:4px 10px;
+                left:-5px;
+                top:4px;
+                border:1px solid #000;
+                background:rgba(50, 50, 50, 0);
+                background-image: url(../img/search.svg);
+                background-size: 40px;
+                background-repeat: no-repeat;
+        background-position: center; 
+
+}
+.searchButton:hover  {
+                background-color:#c6d6d9;
+
 }

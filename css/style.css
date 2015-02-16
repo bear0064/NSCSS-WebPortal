@@ -445,8 +445,7 @@ input[placeholder],
 ---------------------------- */
 /* text overlay */
 .category {
-  height: auto;
-  margin: auto;
+  margin: inherit;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -535,6 +534,33 @@ picture:hover {
   max-width: 300px;
   max-height: 40px; }
 
+/* Search Box*/
+form {
+  width: 250px;
+  margin: 0 auto; }
+
+.searchFeild {
+  width: 150px;
+  padding: 4px 10px;
+  background: rgba(50, 50, 50, 0);
+  border: 1px solid #000; }
+
+.searchButton {
+  width: 50px;
+  position: relative;
+  padding: 4px 10px;
+  left: -5px;
+  top: 4px;
+  border: 1px solid #000;
+  background: rgba(50, 50, 50, 0);
+  background-image: url(../img/search.svg);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.searchButton:hover {
+  background-color: #c6d6d9; }
+
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
 .wrapper {
@@ -547,7 +573,7 @@ picture:hover {
 
 .category {
   width: 100%;
-  padding: 5px 0 5px 0; }
+  margin: 5px; }
 
 .warning {
   display: none;
@@ -596,21 +622,26 @@ picture:hover {
     float: left;
     display: block;
     width: 33.33%;
-    padding: 5px; } }
+    padding: 5px;
+    margin: 0 auto; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .category {
     display: inline-block;
     max-width: 230px;
     width: 15%;
-    padding: 5px; } }
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   .category {
     display: inline-block;
     max-width: 230px;
     width: 15%;
-    padding: 10px; } }
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); } }
 /* = Header
 -------------------------------------------------------------------------------------------------------------------- */
 header {
@@ -788,10 +819,19 @@ nav {
   padding-top: 40px; }
 
 #search {
+  padding-top: 20px;
   text-align: center; }
 
 #social-media {
   text-align: center; }
+
+.social {
+  width: 30px;
+  margin: 10px; }
+
+#copyright {
+  padding: 5px 0;
+  font-size: 10px; }
 
 /* sliding line*/
 .service-select-nav a {
