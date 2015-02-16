@@ -49,7 +49,8 @@ header {
     z-index: 10;
     float: right;
     margin: 30px 75px;
-    width: 220px;
+    width: 150px;
+    cursor: pointer;
 }
 
 #location-nav>p {
@@ -117,7 +118,20 @@ nav {
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {}
 /* Small Devices, Tablets */
 
-@media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {}
+@media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
+    #location-nav {
+        display: block;
+        margin: 30px 35px;
+
+    }
+    .section-title {
+        margin-top: 10px;
+        width: 400px;
+    }
+    .section-title p {
+        font-size: 30px;
+    }
+}
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
@@ -128,14 +142,12 @@ nav {
         display: block;
     }
     .section-title {
-        width: 500px;   
+        margin-top: 5px;
+        width: 500px;
     }
-    
-    
-//Not sure how im going to handle this.    
-    .section-title p{
-    font-size: 40px;
-        
+    //Not sure how im going to handle this.    
+    .section-title p {
+        font-size: 40px;
     }
 }
 /* Large Devices, Wide Screens */
