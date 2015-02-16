@@ -517,19 +517,24 @@ picture:hover {
   #main {
     position: fixed;
     left: 0; } }
-img {
-  image-rendering: optimizeSpeed;
-  /* FUCK SMOOTHING, GIVE ME SPEED  */
-  image-rendering: -moz-crisp-edges;
-  /* Firefox                        */
-  image-rendering: -o-crisp-edges;
-  /* Opera                          */
-  image-rendering: -webkit-optimize-contrast;
-  /* Chrome (and eventually Safari) */
-  image-rendering: optimize-contrast;
-  /* CSS3 Proposed                  */
-  -ms-interpolation-mode: nearest-neighbor;
-  /* IE8+                           */ }
+.warning {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 15px; }
+
+.warning p {
+  max-width: 350px;
+  margin: 0 auto; }
+
+#storeCons {
+  padding-top: 20px; }
+
+#storeCons img {
+  max-width: 300px;
+  max-height: 50px; }
 
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
@@ -545,18 +550,41 @@ img {
   width: 100%;
   padding: 5px 0 5px 0; }
 
+.warning {
+  display: none;
+  background-color: white;
+  width: auto;
+  height: auto; }
+
+.warning img {
+  max-width: 150px; }
+
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .category {
-    max-height: 100px;
-    padding: 5px 0 5px 0; } }
+    display: none; }
+
+  #main {
+    display: none; }
+
+  header {
+    display: none; }
+
+  .warning {
+    display: block; } }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .category {
-    float: left;
-    display: block;
-    width: 50%;
-    padding: 5px; } }
+    display: none; }
+
+  #main {
+    display: none; }
+
+  header {
+    display: none; }
+
+  .warning {
+    display: block; } }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .category {

@@ -20,25 +20,63 @@
     
     padding: 5px 0 5px 0;
 }
+
+
+.warning{
+    display:none;
+    background-color: white;
+    width: auto;
+    height:auto;
+    
+}
+
+.warning img{
+    max-width: 150px;
+}
+
+
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
 .category {
-max-height:100px;
-padding: 5px 0 5px 0;
+display:none;
 }
+#main{
+ display: none;
+}
+header{
+     display: none;
+}
+.warning{
+ 
+    display:block;
+    
+}
+    
+    
 
 }
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
     .category {
-        float:left;
-        
-        display:block;
-        width: 50%;
-        padding: 5px;
+
+        display:none;
+
     }
+#main{
+ display: none;
+}
+    header{
+     display: none;
+}
+.warning{
+ 
+    display:block;
+    
+}
+    
+    
 }
 /* Small Devices, Tablets */
 

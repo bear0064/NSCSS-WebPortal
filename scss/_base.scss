@@ -244,12 +244,30 @@ picture:hover {
 
 
 
-img { 
-    image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
-    image-rendering: -moz-crisp-edges;          /* Firefox                        */
-    image-rendering: -o-crisp-edges;            /* Opera                          */
-    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+.warning{
+    position: fixed;
+    top:100px;
+    
+    left: 0;
+    right: 0;
+    
+    text-align: center;
+    margin:15px;
+}
+.warning p {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#storeCons{
+    
+    
+    padding-top: 20px;
+}
+
+#storeCons img{
+    max-width: 300px; 
+    max-height: 50px;
     
 }
