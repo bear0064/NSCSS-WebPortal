@@ -6,6 +6,7 @@
     <title>NSCSS: East Algoma Connects</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 </head>
 
@@ -32,29 +33,65 @@
     <div id="main-nav">
 
         <ul class="service-select-nav">
-            <li><a href="#">Mental Health Services</a>
+            <li>
+                <i class="fa fa-leaf"></i>
+                <a href="#">Mental Health Services</a>
             </li>
-            <li> <a href="#">Addiction Services</a>
+            <li>
+                <i class="fa fa-glass"></i>
+                <a href="#">Addiction Services</a>
             </li>
-            <li> <a href="#">Houseing, Food &amp; Money</a>
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="#">Housing, Food &amp; Money</a>
+
             </li>
-            <li> <a href="#">Hospitals, Clinics &amp; Pharmacies</a>
+            <li>
+                <i class="fa fa-heartbeat"></i>
+                <a href="#">Hospitals, Clinics &amp; Pharmacies</a>
+
             </li>
-            <li> <a href="#">Education &amp; Legal</a>
+            <li>
+                <i class="fa fa-graduation-cap"></i>
+                <a href="#">Education &amp; Legal</a>
+
             </li>
-            <li> <a href="#">Clothing &amp; Worship</a>
+            <li>
+                <i class="fa fa-suitcase"></i>
+                <a href="#">Clothing &amp; Worship</a>
+
+
             </li>
-            <li> <a href="#">Organizations A-Z</a>
+            <li>
+                <i class="fa fa-building"></i>
+                <a href="#">Organizations A-Z</a>
+
             </li>
-            <li> <a href="#">Upcoming Events</a>
+            <li>
+                <i class="fa fa-calendar"></i>
+                <a href="#">Upcoming Events</a>
+
             </li>
-            <li> <a href="#"><span>Helplines</span></a>
+            <li>
+                <i class="fa fa-phone"></i>
+                <a href="#"><span>Helplines</span></a>
             </li>
 
             <div id="secondary-select-nav">
-                <li> <a href="#">About Us</a>
+                <li>
+                    <i class="fa fa-info-circle"></i>
+                    <a href="#">About Us</a>
+
                 </li>
-                <li> <a href="#">Submit Event</a>
+                <li>
+                    <i class="fa fa-envelope-o"></i>
+                    <a href="#">Submit Event</a>
+
+                </li>
+                <li>
+                    <i class="fa fa-bug"></i>
+                    <a href="#">Errors &amp; Omissions</a>
+
                 </li>
             </div>
 
@@ -66,19 +103,19 @@
             </div>
 
             <div id="social-media">
-                
-                            <img class="social" src="img/facebook.svg" alt='facebook'>
 
-                            <img class="social" src="img/twitter.svg" alt='twitter'>
+                <img class="social" src="img/facebook.svg" alt='facebook'>
 
-                            <img class="social" src="img/google.svg" alt='google'>
+                <img class="social" src="img/twitter.svg" alt='twitter'>
 
-                            <img class="social" src="img/mail.svg" alt='mailto'>
-                
-                
+                <img class="social" src="img/google.svg" alt='google'>
+
+                <img class="social" src="img/mail.svg" alt='mailto'>
+
+
             </div>
         </ul>
-    <p id="copyright">&copy; NSCSS, inc. All right reserved.</p>
+        <p id="copyright">&copy; NSCSS, inc. All right reserved.</p>
     </div>
 
 
@@ -161,7 +198,7 @@
 
 
 
-                    <div class='category'>
+                    <div class='category' id="algomaMills">
                         <a href='#'>
 
 
@@ -198,7 +235,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="blindRiver">
                         <a href='#'>
 
 
@@ -234,7 +271,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="elliotLake">
                         <a href='#'>
 
 
@@ -270,7 +307,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="ironBridge">
                         <a href='#'>
 
 
@@ -306,7 +343,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="mississauga">
                         <a href='#'>
 
 
@@ -342,7 +379,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="serpentRiver">
                         <a href='#'>
 
 
@@ -378,7 +415,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="serpentRiverFN">
                         <a href='#'>
 
 
@@ -414,7 +451,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="spragge">
                         <a href='#'>
 
 
@@ -450,7 +487,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="spanish">
                         <a href='#'>
 
 
@@ -486,7 +523,7 @@
                     </div>
 
 
-                    <div class='category'>
+                    <div class='category' id="thessalon">
                         <a href='#'>
 
 
@@ -520,7 +557,7 @@
                         </a>
 
                     </div>
-                    <div class='category'>
+                    <div class='category' id="thessalonFN">
                         <a href='#'>
 
                             <picture>
@@ -569,11 +606,8 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/javascriptFn.js"></script>
-    <script src="js/jStorage.min.js"></script>
-    <script src="js/TaffyDB.js"></script>
-    <script src="js/captureData.js"></script>
-
+    <script src="js/navigation.js"></script>
+        <script src="js/javaJsonCalls.js"></script>
 </body>
 
 </html>

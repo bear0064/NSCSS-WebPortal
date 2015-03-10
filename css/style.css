@@ -516,12 +516,15 @@ picture:hover {
   #main {
     position: fixed;
     left: 0; } }
-.warning {
+body > div.warning {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  text-align: center; }
+  max-height: auto;
+  height: 900px;
+  text-align: center;
+  z-index: 90; }
 
 .warning p {
   max-width: 400px;
@@ -785,12 +788,14 @@ nav {
   left: 0;
   top: 0;
   overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   cursor: default;
   background: #fcfcf1;
   position: fixed;
   z-index: 2;
   left: 0;
-  width: 250px;
+  width: 290px;
   height: 100%;
   text-align: center;
   display: none;
@@ -800,7 +805,8 @@ nav {
   text-decoration: none;
   line-height: 40px;
   text-align: left;
-  margin-left: 10px; }
+  margin-left: 10px;
+  list-style-type: none; }
 
 .service-select-nav a {
   color: #000; }
@@ -816,9 +822,6 @@ nav {
 
 .service-select-nav span {
   color: red; }
-
-#secondary-select-nav {
-  padding-top: 40px; }
 
 #search {
   padding-top: 20px;
@@ -848,6 +851,18 @@ nav {
 .service-select-nav a:hover {
   border-bottom: 3px solid black;
   width: 230px; }
+
+i {
+  width: 16px;
+  text-align: center;
+  display: block;
+  position: relative;
+  left: 0px;
+  top: 0px; }
+
+#main-nav > ul > li > a, #secondary-select-nav > li > a {
+  position: relative;
+  left: 10px; }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   #main-nav {

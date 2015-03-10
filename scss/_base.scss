@@ -243,17 +243,16 @@ picture:hover {
     }
 }
 
-
-
-
-.warning{
+body > div.warning{
     position: fixed;
     top:0;
     
     left: 0;
     right: 0;
-    
-    text-align: center;
+    max-height: auto;
+    height: 900px;
+    text-align: center;      
+  z-index: 90;
     //margin:15px;
 }
 .warning p {

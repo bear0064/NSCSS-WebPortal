@@ -3,12 +3,14 @@
     left: 0;
     top: 0;
     overflow: hidden;
+      overflow-x: hidden;
+  overflow-y: auto;
     cursor: default;
     background: #fcfcf1;
     position: fixed;
     z-index: 2;
     left: 0;
-    width: 250px;
+    width: 290px;
     height: 100%;
     text-align: center;
     display: none;
@@ -20,6 +22,7 @@ cursor: pointer;
     line-height: 40px;
     text-align: left;
     margin-left: 10px; 
+    list-style-type:none;	
 }
 
 .service-select-nav a{
@@ -46,7 +49,7 @@ cursor: pointer;
 
 
 #secondary-select-nav{
-    padding-top: 40px;
+//    padding-top: 40px;
 }
 #search{
     padding-top:20px;
@@ -87,9 +90,21 @@ cursor: pointer;
 
 
 
+i{  
+    width: 16px;
+    text-align: center;
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 0px;
 
+    
+}
 
-
+#main-nav > ul > li > a, #secondary-select-nav > li > a{
+ position: relative;
+    left: 10px;
+}
 
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
 #main-nav {
