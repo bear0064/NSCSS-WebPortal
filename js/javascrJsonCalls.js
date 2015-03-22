@@ -218,7 +218,7 @@ function displaySrv(event) {
     if (info[0].website == null) {
 
     } else {
-        q += "<a href=" + info[0].website + "id='webpage'>" + info[0].website + "</a>";
+        q += "<a href=" + info[0].website + "id='webpage'>" + info[0].name_en + "</a>";
     };
     if (info[0].address_line1 == null) {} else {
         q += "<p id='addLine1'>" + info[0].address_line1 + "</p>";
