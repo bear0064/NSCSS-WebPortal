@@ -697,7 +697,25 @@ img#serviceimg {
     width: 15%;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
     -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
-    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); } }
+    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); }
+
+  img#serviceimg {
+    width: 40%;
+    float: left;
+    padding: 0; }
+
+  #desc {
+    padding: 0;
+    float: right;
+    width: 57%; }
+
+  #servArea {
+    float: right;
+    width: 57%; }
+
+  #contactDiv {
+    clear: left;
+    float: left; } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
   .community {

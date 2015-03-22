@@ -207,21 +207,21 @@ function displaySrv(event) {
     
     q += "<div id='contactDiv'>"
     q += "<p id='contHead'>Contact Information</p>";
-    q += "<p id='phone'>" + info[0].phone + "</p>";
-    q += "<p id='fax'>" + info[0].fax + "</p>";
+    q += "<p id='phone'>Phone: " + info[0].phone + "</p>";
+    q += "<p id='fax'>Fax: " + info[0].fax + "</p>";
     if (info[0].email == null) {
 
     } else {
-        q += "<a href=mailto:" + info[0].email + " id='email'>" + info[0].email + "</a>";
+        q += "<p>Email: </p><a href=mailto:" + info[0].email + " id='email'>" + info[0].email + "</a>";
     };
 
     if (info[0].website == null) {
 
     } else {
-        q += "<a href=" + info[0].website + "id='webpage'>" + info[0].name_en + "</a>";
+        q += "<a href=" + info[0].website + "id='webpage'>Website: " + info[0].name_en + "</a>";
     };
     if (info[0].address_line1 == null) {} else {
-        q += "<p id='addLine1'>" + info[0].address_line1 + "</p>";
+        q += "<p id='addLine1'>Address: " + info[0].address_line1 + "</p>"; 
     }
     if (info[0].address_line2 == null) {} else {
         q += "<p id='addLine2'>" + info[0].address_line2 + "</p>";
