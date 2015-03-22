@@ -565,25 +565,45 @@ form {
 .searchButton:hover {
   background-color: #c6d6d9; }
 
+.infoBody {
+  padding-left: 291px;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  font-family: georgia;
+  font-weight: 400; }
+
 .loaded {
-  position: relative;
-  left: 295px;
-  top: 110px;
-  margin: 15px;
-  max-width: 77%; }
+  margin: 15px; }
 
 .listData {
   padding: 7px; }
 
 .serviceHeader {
-  position: relative;
-  top: 110px;
   text-align: center;
   font-family: georgia;
   font-weight: 400; }
 
 br {
   display: none; }
+
+.listData:hover h3 {
+  cursor: pointer;
+  color: #F9A71B;
+  -webkit-transition-property: color, text;
+  -webkit-transition-duration: 1s, 1s;
+  -webkit-transition-timing-function: linear, ease-in;
+  -moz-transition-property: color, text;
+  -moz-transition-duration: 1s;
+  -moz-transition-timing-function: linear, ease-in;
+  -o-transition-property: color, text;
+  -o-transition-duration: 2s;
+  -o-transition-timing-function: linear, ease-in; }
+
+#serviceHead {
+  text-align: center;
+  font-family: georgia;
+  font-weight: 400; }
 
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */

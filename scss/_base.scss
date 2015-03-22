@@ -1,7 +1,6 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+
 //
-
-
 html {
     box-sizing: border-box;
 }
@@ -148,8 +147,6 @@ select {}
     -ms-filter: grayscale(1);
     -o-filter: grayscale(1);
     filter: grayscale(1);
-    
-    
 }
 
 .community:hover,
@@ -163,18 +160,14 @@ picture:hover {
     transition-duration: 1s;
 }
 
-
-
-.overlay{
+.overlay {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     overflow: hidden;
-    
 }
-
 
 .overlay p {
     font-family: $font-third;
@@ -182,11 +175,9 @@ picture:hover {
     color: #fcfcf1;
     font-weight: 200;
     font-size: 30px;
-    
 }
 
 #startHere {
-    
     margin-bottom: 20px;
 }
 
@@ -198,14 +189,14 @@ picture:hover {
 }
 
 @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-    .overlay{
+    .overlay {
         padding: 33px 0 33px 0;
     }
 }
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
-    .overlay{
+    .overlay {
         padding: 60px 0 60px 0;
     }
 }
@@ -214,7 +205,6 @@ picture:hover {
 @media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
     .overlay {
         padding: 100px 0 100px 0;
-        
     }
 }
 /* Medium Devices, Desktops */
@@ -222,11 +212,10 @@ picture:hover {
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
     .overlay {
         padding: 33px 0px 33px 0px;
-
     }
     #main {
         //left: 250px;
-        left:0;
+        left: 0;
         position: fixed;
     }
 }
@@ -235,114 +224,135 @@ picture:hover {
 @media only screen and (min-width: $breakpoint-xl) {
     .overlay p {
         padding: 33px 0 33px 0;
-            
-
     }
     #main {
         position: fixed;
         //left: 250px;
-        left:0;
+        left: 0;
     }
 }
 
-body > div.warning{
+body > div.warning {
     position: fixed;
-    top:0;
-    
+    top: 0;
     left: 0;
     right: 0;
     max-height: auto;
     height: 900px;
-    text-align: center;      
-  z-index: 90;
+    text-align: center;
+    z-index: 90;
     //margin:15px;
 }
+
 .warning p {
     max-width: 400px;
     margin: 0 auto;
 }
 
-#storeCons{
-    
+#storeCons {
     padding-top: 10px;
 }
 
-#storeCons img{
-    max-width: 300px; 
+#storeCons img {
+    max-width: 300px;
     max-height: 40px;
-    
 }
 
-#search{
- 
-    
-
-}
-
-
-
+#search {}
 /* Search Box*/
 
-
 form {
-                width: 250px;
-                margin:0 auto;
+    width: 250px;
+    margin: 0 auto;
 }
+
 .searchFeild {
-                width:150px;
-                padding:4px 10px;
-                background:rgba(50, 50, 50, 0);
-                border:1px solid #000;
-        outline: none;
-
+    width: 150px;
+    padding: 4px 10px;
+    background: rgba(50, 50, 50, 0);
+    border: 1px solid #000;
+    outline: none;
 }
+
 .searchButton {
-                width:50px;
-                position:relative;
-                padding:4px 10px;
-                left:-5px;
-                top:4px;
-                border:1px solid #000;
-                background:rgba(50, 50, 50, 0);
-                background-image: url(../img/search.svg);
-                background-size: 40px;
-                background-repeat: no-repeat;
-        background-position: center; 
-
-}
-.searchButton:hover  {
-                background-color:#c6d6d9;
-
+    width: 50px;
+    position: relative;
+    padding: 4px 10px;
+    left: -5px;
+    top: 4px;
+    border: 1px solid #000;
+    background: rgba(50, 50, 50, 0);
+    background-image: url(../img/search.svg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-
-
-
-.loaded{
-
-  position: relative;
-  left: 295px;
-  top: 110px;
-  margin: 15px;
-  max-width: 77%;
- 
-
+.searchButton:hover {
+    background-color: #c6d6d9;
 }
 
-.listData{
-    
-      padding: 7px;
-
+.infoBody {
+    padding-left: 291px;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    font-family: georgia;
+    font-weight: 400;
 }
 
-.serviceHeader{
-  position: relative;
-  top: 110px;
-  text-align: center;
-  font-family: georgia;
-  font-weight: 400;
+.loaded {
+    margin: 15px;
+}
+
+.listData {
+    padding: 7px;
+}
+
+.serviceHeader {
+    text-align: center;
+    font-family: georgia;
+    font-weight: 400;
 }
 
 br {
-    display:none;
+    display: none;
 }
+
+.listData:hover h3{
+    
+    cursor: pointer;
+    
+    color: #F9A71B;
+    -webkit-transition-property: color, text;
+    -webkit-transition-duration: 1s, 1s;
+    -webkit-transition-timing-function: linear, ease-in;
+    -moz-transition-property: color, text;
+    -moz-transition-duration: 1s;
+    -moz-transition-timing-function: linear, ease-in;
+    -o-transition-property: color, text;
+    -o-transition-duration: 2s;
+    -o-transition-timing-function: linear, ease-in;
+}
+
+
+
+
+
+
+#serviceHead {
+    text-align: center;
+    font-family: georgia;
+    font-weight: 400;
+}
+
+
+#desc{}
+#servArea{}
+#contHead{}
+#phone{}
+#fax{}
+#email{}
+#webpage{}
+#addLine1{}
+#addLine2{}
