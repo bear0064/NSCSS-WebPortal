@@ -565,6 +565,27 @@ form {
 .searchButton:hover {
   background-color: #c6d6d9; }
 
+.loaded {
+  position: relative;
+  left: 295px;
+  top: 110px;
+  margin: 15px;
+  max-width: 77%; }
+
+.listData {
+  padding: 7px; }
+
+.serviceHeader {
+  position: relative;
+  top: 110px;
+  /* align-content: center; */
+  text-align: center;
+  font-family: georgia;
+  font-weight: 400; }
+
+br {
+  display: none; }
+
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
 .wrapper {
@@ -656,6 +677,7 @@ header {
   -moz-box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
   box-shadow: 0px -1px 30px rgba(50, 50, 50, 0.75);
   position: fixed;
+  top: 0;
   z-index: 6; }
 
 #logo {
