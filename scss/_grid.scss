@@ -15,7 +15,7 @@
     }
 
 
-.category {
+.community {
     width: 100%;
     margin: 5px;
 
@@ -38,7 +38,7 @@
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-.category {
+.community {
 display:none;
 }
 #main{
@@ -61,7 +61,7 @@ header{
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
-    .category {
+    .community {
 
         display:none;
 
@@ -86,7 +86,7 @@ header{
 /* Small Devices, Tablets */
 
 @media only screen and (min-width: $breakpoint-med) and (max-width: $breakpoint-lg) {
-    .category {
+    .community {
         float: left;
         display: block;
         width: 33.33%;
@@ -98,7 +98,7 @@ header{
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
-    .category {
+    .community {
         
         display: inline-block;
         max-width: 230px;
@@ -112,7 +112,7 @@ box-shadow:         0px 1px 6px 0px rgba(50, 50, 50, 0.21);
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: $breakpoint-xl) {
-    .category {
+    .community {
         
         display: inline-block;
         //width: 15%;

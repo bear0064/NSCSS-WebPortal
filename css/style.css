@@ -444,7 +444,7 @@ input[placeholder],
 /* = Form Input Styles
 ---------------------------- */
 /* text overlay */
-.category {
+.community {
   margin: inherit;
   text-align: center;
   position: relative;
@@ -455,7 +455,7 @@ input[placeholder],
   -o-filter: grayscale(1);
   filter: grayscale(1); }
 
-.category:hover,
+.community:hover,
 picture:hover {
   -moz-filter: grayscale(0);
   -ms-filter: grayscale(0);
@@ -575,7 +575,7 @@ form {
   padding-top: 120px;
   text-align: center; }
 
-.category {
+.community {
   width: 100%;
   margin: 5px; }
 
@@ -590,7 +590,7 @@ form {
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .category {
+  .community {
     display: none; }
 
   #main {
@@ -606,7 +606,7 @@ form {
     display: none; } }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-  .category {
+  .community {
     display: none; }
 
   #main {
@@ -622,7 +622,7 @@ form {
     display: none; } }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-  .category {
+  .community {
     float: left;
     display: block;
     width: 33.33%;
@@ -630,7 +630,7 @@ form {
     margin: 0 auto; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .category {
+  .community {
     display: inline-block;
     max-width: 230px;
     width: 15%;
@@ -639,7 +639,7 @@ form {
     box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
-  .category {
+  .community {
     display: inline-block;
     max-width: 230px;
     width: 15%;
@@ -851,14 +851,6 @@ nav {
 .service-select-nav a:hover {
   border-bottom: 3px solid black;
   width: 230px; }
-
-i {
-  width: 16px;
-  text-align: center;
-  display: block;
-  position: relative;
-  left: 0px;
-  top: 0px; }
 
 #main-nav > ul > li > a, #secondary-select-nav > li > a {
   position: relative;

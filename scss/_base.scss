@@ -1,4 +1,6 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+//
+
 
 html {
     box-sizing: border-box;
@@ -136,7 +138,7 @@ textarea {}
 select {}
 /* text overlay */
 
-.category {
+.community {
     margin: inherit;
     text-align: center;
     position: relative;
@@ -150,7 +152,7 @@ select {}
     
 }
 
-.category:hover,
+.community:hover,
 picture:hover {
     -moz-filter: grayscale(0);
     -ms-filter: grayscale(0);
