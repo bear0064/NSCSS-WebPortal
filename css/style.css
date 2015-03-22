@@ -577,7 +577,7 @@ form {
   margin: 15px; }
 
 .listData {
-  padding: 7px; }
+  padding: 10px 7px 10px 7px; }
 
 .serviceHeader {
   text-align: center;
@@ -591,19 +591,40 @@ br {
   cursor: pointer;
   color: #F9A71B;
   -webkit-transition-property: color, text;
-  -webkit-transition-duration: 1s, 1s;
+  -webkit-transition-duration: 500ms, 500ms;
   -webkit-transition-timing-function: linear, ease-in;
   -moz-transition-property: color, text;
-  -moz-transition-duration: 1s;
+  -moz-transition-duration: 500ms;
   -moz-transition-timing-function: linear, ease-in;
   -o-transition-property: color, text;
-  -o-transition-duration: 2s;
+  -o-transition-duration: 500ms;
   -o-transition-timing-function: linear, ease-in; }
+
+.listData p {
+  cursor: pointer; }
 
 #serviceHead {
   text-align: center;
   font-family: georgia;
   font-weight: 400; }
+
+img#serviceimg {
+  display: block;
+  margin: 0 auto; }
+
+#desc {
+  padding: 15px 0 15px 0; }
+
+#servArea {
+  padding: 15px 0 15px 0; }
+
+#contactDiv {
+  overflow-wrap: break-word;
+  padding: 15px 0 15px 0; }
+
+#map {
+  padding: 15px 0 15px 0;
+  width: 100%; }
 
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */
@@ -685,7 +706,24 @@ br {
     width: 15%;
     -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
     -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
-    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); } }
+    box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21); }
+
+  img#serviceimg {
+    width: 40%;
+    float: left;
+    padding: 0; }
+
+  #desc {
+    float: right;
+    width: 57%; }
+
+  #servArea {
+    float: right;
+    width: 57%; }
+
+  #contactDiv {
+    clear: left;
+    float: left; } }
 /* = Header
 -------------------------------------------------------------------------------------------------------------------- */
 header {

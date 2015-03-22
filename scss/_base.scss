@@ -306,7 +306,7 @@ form {
 }
 
 .listData {
-    padding: 7px;
+    padding: 10px 7px 10px 7px;
 }
 
 .serviceHeader {
@@ -325,17 +325,19 @@ br {
     
     color: #F9A71B;
     -webkit-transition-property: color, text;
-    -webkit-transition-duration: 1s, 1s;
+    -webkit-transition-duration: 500ms, 500ms;
     -webkit-transition-timing-function: linear, ease-in;
     -moz-transition-property: color, text;
-    -moz-transition-duration: 1s;
+    -moz-transition-duration: 500ms;
     -moz-transition-timing-function: linear, ease-in;
     -o-transition-property: color, text;
-    -o-transition-duration: 2s;
+    -o-transition-duration: 500ms;
     -o-transition-timing-function: linear, ease-in;
 }
 
-
+.listData p{
+    cursor: pointer;
+}
 
 
 
@@ -347,12 +349,31 @@ br {
 }
 
 
-#desc{}
-#servArea{}
-#contHead{}
+img#serviceimg {
+    display:block;
+    margin: 0 auto;
+}
+
+#desc{
+  padding: 15px 0 15px 0;
+}
+
+#servArea{
+    padding: 15px 0 15px 0;
+}
+#contactDiv{
+    overflow-wrap: break-word;
+    padding: 15px 0 15px 0;
+}
+#contHead{
+}
 #phone{}
 #fax{}
 #email{}
 #webpage{}
 #addLine1{}
 #addLine2{}
+#map{
+    padding: 15px 0 15px 0;
+    width: 100%;
+}

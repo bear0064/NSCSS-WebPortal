@@ -196,11 +196,16 @@ function displaySrv(event) {
 
     q += "<h1 id='serviceHead'>" + info[0].name_en + "</h1>";
     
+    q += "<div>"
+    
     q += "<img id='serviceimg' src='http://www.nscss.com/EAConnects/admin/getimage.php?type=2&amp;program_id="+ selectedServ +"'>";
     
+    q += "</div>"
     
     q += "<p id='desc'>" + info[0].description_en + "</p>";
     q += "<p id='servArea'>Service Areas (take some info here blah blah)</p>";
+    
+    q += "<div id='contactDiv'>"
     q += "<p id='contHead'>Contact Information</p>";
     q += "<p id='phone'>" + info[0].phone + "</p>";
     q += "<p id='fax'>" + info[0].fax + "</p>";
@@ -222,7 +227,27 @@ function displaySrv(event) {
         q += "<p id='addLine2'>" + info[0].address_line2 + "</p>";
     }
     
-    q += "<iframe width='400' height='350' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+ info[0].address_line1 + ',' +  info[0].city_and_state + ',' + info[0].postal_code +" &key=AIzaSyBiHQYWPrjtUIlKgprnAcftiBtcO2iU0zw'></iframe>"
+    
+    if (info[0].city_and_state == null) {} else {
+        q += "<p id='addLine1'>" + info[0].city_and_state + "</p>";
+    }
+    
+    if (info[0].postal_code == null) {} else {
+        q += "<p id='addLine1'>" + info[0].postal_code + "</p>";
+    }
+    
+    q += "</div>"
+    
+    
+    
+    if (info[0].address_line1 == null && info[0].city_and_state == null && info[0].postal_code == null) {} else {
+        
+    
+    q += "<iframe id='map' width='600' height='350' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+ info[0].address_line1 + ',' +  info[0].city_and_state + ',' + info[0].postal_code +" &key=AIzaSyBiHQYWPrjtUIlKgprnAcftiBtcO2iU0zw'></iframe>"
+    
+    }
+    
+    
     
     
     document.querySelector(".loaded").innerHTML += q;
