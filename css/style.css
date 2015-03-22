@@ -578,7 +578,6 @@ form {
 .serviceHeader {
   position: relative;
   top: 110px;
-  /* align-content: center; */
   text-align: center;
   font-family: georgia;
   font-weight: 400; }
