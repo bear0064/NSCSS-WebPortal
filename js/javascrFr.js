@@ -209,7 +209,7 @@ function displayRes() {
             s += "<div class='listData' data-ref='" + data[i].program_id + "'>";
 
         }
-        s += "<h3 class='serviceName'>" + data[i].name_en + "</h3>";
+        s += "<h3 class='serviceName'>" + data[i].name_fr + "</h3>";
         s += "<p>" + data[i].address_line1 + "</p>";
         s += "<p>" + data[i].phone + "</p>";
         s += "</div>";
@@ -263,7 +263,7 @@ function displaySrv(event) {
 
     var q = "";
 
-    q += "<h1 id='serviceHead'>" + info[0].name_en + "</h1>";
+    q += "<h1 id='serviceHead'>" + info[0].name_fr + "</h1>";
 
     q += "<div>";
 
@@ -278,7 +278,7 @@ function displaySrv(event) {
 
     q += "</div>";
 
-    q += "<p id='desc'>" + info[0].description_en + "</p>";
+    q += "<p id='desc'>" + info[0].description_fr + "</p>";
 
     
     if (info[0].monday_start !== null && info[0].monday_start !== "" || info[0].tuesday_start !== null && info[0].tuesday_start !== "" || info[0].wednesday_start !== null && info[0].wednesday_start !== "" || info[0].thursday_start !== null  && info[0].thursday_start !== "" || info[0].friday_start !== null  && info[0].friday_start !== ""  || info[0].saturday_start !== null  && info[0].saturday_start !== ""  || info[0].sunday_start !== null && info[0].sunday_start !== "" ) {
