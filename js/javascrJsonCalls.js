@@ -84,7 +84,7 @@ $(document).ready(function () {
             sendQryOrg();
         }
         //Set categoryId for query out
-        console.log(this);
+        
         //link to a method to create query and send for the data    
 
         var originalText = $(this).text();
@@ -111,16 +111,37 @@ function sendQry() {
     var qry = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&-sort=name_en+asc&categories=%3D" + categoryId + "&communities=%3D" + communityId + "&-action=export_json";
 
 
+    
+    
 
+$( document ).ajaxStart(function() {
 
-    var request = $.ajax({
+$("#ajaxSpinnerImage").remove();
+    
+    $('.infoBody').append("<img src='img/ajax-loader.gif' id='ajaxSpinnerImage'/></img>");
+            $('#ajaxSpinnerImage').show();
+
+        })
+        .ajaxStop(function () {
+            $('#ajaxSpinnerImage').hide();
+
+        });
+        
+
+    var request = 
+        
+        
+
+        
+        
+    $.ajax({
         url: qry,
         type: "GET",
         dataType: "json"
     });
 
     request.done(function (msg) {
-        console.log(msg)
+        
         data = msg;
 
         displayRes();
@@ -148,7 +169,7 @@ function getService() {
     });
 
     request.done(function (svc) {
-        console.log(svc)
+        
         info = svc;
 
         displaySrv();
@@ -181,9 +202,9 @@ function sendQryOrg() {
     });
 
     request.done(function (org) {
-        console.log(org)
+        
         data = org;
-        console.log(org);
+        
         displayRes();
 
     });
@@ -238,14 +259,6 @@ function displayRes() {
 
 
         //displaySrv();    
-
-
-
-
-
-        console.log(selectedServ);
-
-
 
     });
 
@@ -418,7 +431,6 @@ function getOrganization() {
     });
 
     request.done(function (svc) {
-        console.log(svc)
         info = svc;
 
         displaySrv();
