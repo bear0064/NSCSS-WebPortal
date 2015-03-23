@@ -715,6 +715,16 @@ img#serviceimg {
 
   #contactDiv {
     clear: left;
+    float: left; }
+
+  #hop {
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-left: 11px; }
+
+  #address {
+    clear: left;
     float: left; } }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
@@ -729,9 +739,11 @@ img#serviceimg {
   img#serviceimg {
     width: 40%;
     float: left;
-    padding: 0; }
+    padding: 0;
+    min-width: 40%; }
 
   #desc {
+    padding: 0;
     float: right;
     width: 57%; }
 
@@ -741,7 +753,18 @@ img#serviceimg {
 
   #contactDiv {
     clear: left;
-    float: left; } }
+    float: left; }
+
+  #hop {
+    display: block;
+    float: left;
+    padding: 15px;
+    margin-left: 17px; }
+
+  #address {
+    display: block;
+    float: left;
+    clear: left; } }
 /* = Header
 -------------------------------------------------------------------------------------------------------------------- */
 header {

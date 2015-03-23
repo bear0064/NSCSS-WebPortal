@@ -195,59 +195,144 @@ function displaySrv(event) {
     var q = "";
 
     q += "<h1 id='serviceHead'>" + info[0].name_en + "</h1>";
-    
-    q += "<div>"
-    
-    q += "<img id='serviceimg' src='http://www.nscss.com/EAConnects/admin/getimage.php?type=2&amp;program_id="+ selectedServ +"'>";
-    
-    q += "</div>"
-    
+
+    q += "<div>";
+
+    q += "<img id='serviceimg' src='http://www.nscss.com/EAConnects/admin/getimage.php?type=2&amp;program_id=" + selectedServ + "'>";
+
+    q += "</div>";
+
     q += "<p id='desc'>" + info[0].description_en + "</p>";
-    q += "<p id='servArea'>Service Areas (take some info here blah blah)</p>";
     
-    q += "<div id='contactDiv'>"
-    q += "<p id='contHead'>Contact Information</p>";
+    
+    
+    if (info[0].monday_start !== null || info[0].tuesday_start !== null || info[0].wednesday_start !== null || info[0].thursday_start !== null || info[0].fridayday_start !== null || info[0].saturdayday_start !== null || info[0].sunday_start !== null) {
+        q += "<div id='hop'>";    
+ q += "<h3>Hours of Operation</h3>";
+}
+    else{}
+    
+
+    if (info[0].monday_start !== null && info[0].monday_end !== null) {
+        q += "<p>Monday: "+ info[0].monday_start.hours + ":" + info[0].monday_start.minutes + " - " + info[0].monday_end.hours + ":" + info[0].monday_end.minutes +"</p>";
+    } else {
+
+    }
+    
+    
+    if (info[0].tuesday_start !== null && info[0].tuesday_end !== null) {
+        q += "<p>Tuesday: "+ info[0].tuesday_start.hours + ":" +
+            info[0].tuesday_start.minutes + " - " +
+            info[0].tuesday_end.hours + ":" +
+            info[0].tuesday_end.minutes
+         +"</p>";
+    } else {
+
+    };
+    if (info[0].wednesday_start !== null && info[0].wednesday_end !== null) {
+        q += "<p>Wednesday: "+ info[0].wednesday_start.hours + ":" +
+            info[0].wednesday_start.minutes + " - " +
+            info[0].wednesday_end.hours + ":" +
+            info[0].wednesday_end.minutes
+         +"</p>";
+    } else {
+
+    };
+    if (info[0].thursday_start !== null && info[0].thursday_end !== null) {
+        q += "<p>Thursday: "+ info[0].thursday_start.hours + ":" +
+            info[0].thursday_start.minutes + " - " +
+            info[0].thursday_end.hours + ":" +
+            info[0].thursday_end.minutes
+         +"</p>";
+    } else {
+
+    };
+    if (info[0].friday_start !== null && info[0].friday_end !== null) {
+
+        q += "<p>Friday: "+ info[0].friday_start.hours + ":" +
+            info[0].friday_start.minutes + " - " +
+            info[0].friday_end.hours + ":" +
+            info[0].friday_end.minutes
+         +"</p>";
+    } else {
+
+    };
+    if (info[0].saturday_start !== null && info[0].saturday_end !== null) {
+        q += "<p>Saturday: "+ info[0].saturday_start.hours + ":" +
+            info[0].saturday_start.minutes + " - " +
+            info[0].saturday_end.hours + ":" +
+            info[0].saturday_end.minutes
+         +"</p>";
+    } else {
+
+    }
+    if (info[0].sunday_start !== null && info[0].sunday_end !== null) {
+        q += "<p>Sunday: "+ info[0].sunday_start.hours + ":" +
+            info[0].sunday_start.minutes + " - " +
+            info[0].sunday_end.hours + ":" +
+            info[0].sunday_end.minutes
+         +"</p>";
+    } else {
+
+    }
+    
+    if (info[0].monday_start !== null || info[0].tuesday_start !== null || info[0].wednesday_start !== null || info[0].thursday_start !== null || info[0].fridayday_start !== null || info[0].saturdayday_start !== null || info[0].sunday_start !== null) {
+    q += "</div>"; 
+    } else {
+
+    }
+    
+    
+    
+    q += "<div id='contactDiv'>";
+    q += "<h3 id='contHead'>Contact Information</h3>";
     q += "<p id='phone'>Phone: " + info[0].phone + "</p>";
     q += "<p id='fax'>Fax: " + info[0].fax + "</p>";
-    if (info[0].email == null) {
+    
+    if (info[0].email !== null) {
+        q += "<p>Email: <a href=mailto:" + info[0].email + " id='email'>" + info[0].email + "</a></p>";
+    } else {};
 
-    } else {
-        q += "<p>Email: </p><a href=mailto:" + info[0].email + " id='email'>" + info[0].email + "</a>";
-    };
+    if (info[0].website !== null) {
+        q += "<p>Website: <a href=" + info[0].website + "id='webpage'>" + info[0].name_en + "</a></p>";
+    } else {};
 
-    if (info[0].website == null) {
-
-    } else {
-        q += "<a href=" + info[0].website + "id='webpage'>Website: " + info[0].name_en + "</a>";
-    };
-    if (info[0].address_line1 == null) {} else {
-        q += "<p id='addLine1'>Address: " + info[0].address_line1 + "</p>"; 
-    }
-    if (info[0].address_line2 == null) {} else {
-        q += "<p id='addLine2'>" + info[0].address_line2 + "</p>";
-    }
+    q += "</div>";
     
     
-    if (info[0].city_and_state == null) {} else {
-        q += "<p id='addLine1'>" + info[0].city_and_state + "</p>";
-    }
-    
-    if (info[0].postal_code == null) {} else {
-        q += "<p id='addLine1'>" + info[0].postal_code + "</p>";
-    }
-    
-    q += "</div>"
-    
-    
-    
-    if (info[0].address_line1 == null && info[0].city_and_state == null && info[0].postal_code == null) {} else {
+    if (info[0].address_line1 !== "" || info[0].address_line2 !== "") {
+    q += "<div id='address'>";    
+    q += "<h3>Address: </h3>";
+} else {}
         
+        
+    if (info[0].address_line1 !== null) {
+        q += "<p id='addLine1'>" + info[0].address_line1 + "</p>";
+    } else {}
+    if (info[0].address_line2 !== null) {
+        q += "<p id='addLine2'>" + info[0].address_line2 + "</p>";
+    } else {}
+
+
+    if (info[0].city_and_state !== null) {
+        q += "<p id='addLine1'>" + info[0].city_and_state + "</p>";
+    } else {}
+
+    if (info[0].postal_code !== null) {
+        q += "<p id='addLine1'>" + info[0].postal_code + "</p>";
+    } else {}
+
+    q += "</div>";
+
+
+
     
-    q += "<iframe id='map' width='600' height='350' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q="+ info[0].address_line1 + ',' +  info[0].city_and_state + ',' + info[0].postal_code +" &key=AIzaSyBiHQYWPrjtUIlKgprnAcftiBtcO2iU0zw'></iframe>"
     
-    }
-    
-    
+
+
+        if (info[0].address_line1 !== null && info[0].city_and_state !== null && info[0].postal_code !== null) {
+        q += "<iframe id='map' width='600' height='350' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?q=" + info[0].address_line1 + ',' + info[0].city_and_state + ',' + info[0].postal_code + " &key=AIzaSyBiHQYWPrjtUIlKgprnAcftiBtcO2iU0zw'></iframe>"
+    } else {}
     
     
     document.querySelector(".loaded").innerHTML += q;

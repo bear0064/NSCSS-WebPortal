@@ -5,83 +5,65 @@
 
 .col-container {
     @extend .clearfix;
-    
 }
-
 
 .col-1 {
     padding-top: 120px;
     text-align: center;
-    }
-
+}
 
 .community {
     width: 100%;
     margin: 5px;
-
 }
 
-
-.warning{
-    display:none;
+.warning {
+    display: none;
     background-color: white;
     width: auto;
-    height:auto;
-    
+    height: auto;
 }
 
-.warning img{
+.warning img {
     max-width: 150px;
 }
-
-
 /* Custom, iPhone Retina */
 
 @media only screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm) {
-.community {
-display:none;
-}
-#main{
- display: none;
-}
-header{
-     display: none;
-}
-.warning{
- 
-    display:block;
-    
-}
-.menu{
- display:none;   
-}
-    
-
+    .community {
+        display: none;
+    }
+    #main {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    .warning {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
 }
 /* Extra Small Devices, Phones */
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-med) {
     .community {
-
-        display:none;
-
+        display: none;
     }
-#main{
- display: none;
-}
-    header{
-     display: none;
-}
-.warning{
- 
-    display:block;
-    
-}
-.menu{
- display:none;   
-}
-    
-    
+    #main {
+        display: none;
+    }
+    header {
+        display: none;
+    }
+    .warning {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
 }
 /* Small Devices, Tablets */
 
@@ -91,111 +73,109 @@ header{
         display: block;
         width: 33.33%;
         padding: 5px;
-        margin:0 auto;
-        
+        margin: 0 auto;
     }
-        
-    
 }
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl) {
     .community {
-        
         display: inline-block;
         max-width: 230px;
         width: 15%;
-            -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
--moz-box-shadow:    0px 1px 6px 0px rgba(50, 50, 50, 0.21);
-box-shadow:         0px 1px 6px 0px rgba(50, 50, 50, 0.21);
-        
+        -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+        -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+        box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
     }
-
-
-
-    
-img#serviceimg {
-    width: 40%;
-    float: left;
-      padding: 0;
-}
-
-#desc{
-    padding:0;
-float: right;
-  width: 57%;
-}
-
-#servArea{
-  float: right;
-  width: 57%;
-}
-#contactDiv{
-clear: left;
-  float: left;
-}
-#contHead{
-}
-#phone{}
-#fax{}
-#email{}
-#webpage{}
-#addLine1{}
-#addLine2{}
-#map{
-    
-//    width: 40%;
-}
-
-
-
+    img#serviceimg {
+        width: 40%;
+        float: left;
+        padding: 0;
+    }
+    #desc {
+        padding: 0;
+        float: right;
+        width: 57%;
+    }
+    #servArea {
+        float: right;
+        width: 57%;
+    }
+    #contactDiv {
+        clear: left;
+        float: left;
+    }
+    #contHead {}
+   #hop {
+        display: block;
+        float: left;
+        padding: 15px;
+        margin-left: 11px;
+    }
+    #phone {}
+    #fax {}
+    #email {}
+    #webpage {}
+    #address {
+        clear: left;
+        float: left;
+    }
+    #addLine1 {}
+    #addLine2 {}
+    #map {
+        //    width: 40%;
+    }
 }
 /* Large Devices, Wide Screens */
 
 @media only screen and (min-width: $breakpoint-xl) {
     .community {
-        
         display: inline-block;
         //width: 15%;
         max-width: 230px;
         width: 15%;
-            -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
--moz-box-shadow:    0px 1px 6px 0px rgba(50, 50, 50, 0.21);
-box-shadow:         0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+        -webkit-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+        -moz-box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
+        box-shadow: 0px 1px 6px 0px rgba(50, 50, 50, 0.21);
     }
-    
-    
-    
-img#serviceimg {
-    width: 40%;
-    float: left;
-      padding: 0;
-}
-
-#desc{
-float: right;
-  width: 57%;
-}
-
-#servArea{
-  float: right;
-  width: 57%;
-}
-#contactDiv{
-clear: left;
-  float: left;
-}
-#contHead{
-}
-#phone{}
-#fax{}
-#email{}
-#webpage{}
-#addLine1{}
-#addLine2{}
-#map{
-    
-//    width: 40%;
-}
-    
+    img#serviceimg {
+        width: 40%;
+        float: left;
+        padding: 0;
+        min-width: 40%;
+    }
+    #desc {
+        padding: 0;
+        float: right;
+        width: 57%;
+    }
+    #servArea {
+        float: right;
+        width: 57%;
+    }
+    #contactDiv {
+        clear: left;
+        float: left;
+    }
+    #hop {
+        display: block;
+        float: left;
+        padding: 15px;
+        margin-left: 17px;
+    }
+    #contHead {}
+    #phone {}
+    #fax {}
+    #email {}
+    #webpage {}
+    #address {
+        display: block;
+        float: left;
+        clear: left;
+    }
+    #addLine1 {}
+    #addLine2 {}
+    #map {
+        //    width: 40%;
+    }
 }
