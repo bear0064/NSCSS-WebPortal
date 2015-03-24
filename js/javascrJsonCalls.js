@@ -271,7 +271,7 @@ function displaySrv(event) {
 
         //DO Nothing
 
-    } else if (!info[0].monday_start && !info[0].tuesday_start && !info[0].wednesday_start && !info[0].thursday_start && !info[0].friday_start && !info[0].saturday_start && !info[0].sunday_start && info[0].start_time && info[0].start_time) {
+    } else if (!info[0].monday_start && !info[0].tuesday_start && !info[0].wednesday_start && !info[0].thursday_start && !info[0].friday_start && !info[0].saturday_start && !info[0].sunday_start && info[0].start_time && info[0].end_time) {
 
         //If there are no hours for Ops and an event start time
 
@@ -328,7 +328,7 @@ function displaySrv(event) {
 
         }
 
-        if (info[0].monday_start !== null || info[0].tuesday_start !== null || info[0].wednesday_start !== null || info[0].thursday_start !== null || info[0].fridayday_start !== null || info[0].saturdayday_start !== null || info[0].sunday_start !== null) {
+        if (info[0].monday_start !== null || info[0].tuesday_start !== null || info[0].wednesday_start !== null || info[0].thursday_start !== null || info[0].friday_start !== null || info[0].saturday_start !== null || info[0].sunday_start !== null) {
             q += "</div>";
         } else {}
 
