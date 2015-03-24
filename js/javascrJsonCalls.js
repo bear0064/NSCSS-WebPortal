@@ -158,6 +158,8 @@ function displayRes() {
 
         document.querySelector(".loaded").innerHTML += q;
         
+        searchTrig = false;
+        
     } 
     
     if (data.length <= 0) {
