@@ -587,9 +587,6 @@ form {
   font-family: georgia;
   font-weight: 400; }
 
-br {
-  display: none; }
-
 .listData:hover h3 {
   cursor: pointer;
   color: #F9A71B;
