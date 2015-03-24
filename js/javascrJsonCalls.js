@@ -4,10 +4,29 @@ var selectedServ;
 var data;
 var info;
 var dateString;
+var searchValue;
 
 $(document).ready(function () {
 
     //listen for ready    
+    
+    
+   
+    $('.searchField').keyup(function(event) {
+        if (event.keyCode == 13) {
+        searchValue = $(this).val();
+        $(this).val('');
+    
+        $(".serviceHeader").empty();
+        $(".loaded").empty();
+        searchFunc();
+         }
+    });
+
+    
+    
+    
+    
 
 $(function() {
 dateString = $.datepicker.formatDate( "mm/dd/yy", $( "#datepicker" ).datepicker( "getDate" ) )        
@@ -15,7 +34,16 @@ dateString = $.datepicker.formatDate( "mm/dd/yy", $( "#datepicker" ).datepicker(
 
     
     
+    $(".searchButton").click(function (event) {
+        event.preventDefault();
+    searchValue = $('.searchFeild').val();
+        $('.searchField').val('');
     
+        $(".serviceHeader").empty();
+        $(".loaded").empty();
+        searchFunc();
+
+    });
     
     
 
@@ -511,62 +539,6 @@ function getEvent() {
 
 }
 
-                
-    
-
-
-
-
-
-
-
-function sendQryUpCome() {
-
-    
-        $(document).ajaxStart(function () {
-
-            $("#ajaxSpinnerImage").remove();
-
-            $('.infoBody').append("<img src='img/ajax-loader.gif' id='ajaxSpinnerImage'/></img>");
-            $('#ajaxSpinnerImage').show();
-
-        })
-        .ajaxStop(function () {
-            $('#ajaxSpinnerImage').hide();
-
-        });
-    
-    
-    
-//Add the first call to the serv where you get the current events for the day.
-
-    var qry = "http://www.nscss.com/EAConnects/admin/index.php?-table=new_events&-action=list&-cursor=0&-mode=list&-limit=20&-action=export_json";
-
-
-
-
-    var request = $.ajax({
-        url: qry,
-        type: "GET",
-        dataType: "json"
-    });
-
-    request.done(function (msg) {
-        
-            
-        
-        data = msg;
-        
-        console.log(msg);
-        displayRes();
-
-    });
-
-    request.fail(function (jqXHR, textStatus) {
-        alert("Request failed: " + textStatus);
-    });
-
-}
 
 
 function getTime(obj) {
@@ -644,3 +616,56 @@ function getUpcomingByDay(){
         alert("Request failed: " + textStatus);
     });    
 }
+
+
+
+
+
+
+
+
+
+
+function searchFunc() {
+
+    
+   var qrySearch = "http://www.nscss.com/EAConnects/admin/index.php?-action=list&-table=programs&-limit=100&name_en=" + searchValue + "&-action=export_json";
+    
+
+    var request = $.ajax({
+        url: qrySearch,
+        type: "GET",
+        dataType: "json",
+        error: function(x, e) {
+            if (x.status == 500) {
+                var q = "";
+
+                q += "<h1 id='serviceHead'>Sorry, no results availiable.</h1>";    
+                
+                document.querySelector(".loaded").innerHTML += q;
+
+            }
+        }
+    });
+
+    request.done(function (src) {
+
+        data = src;
+        console.log(src);
+        
+        displayRes();
+
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        
+    });
+
+}
+
+
+
+
+
+
+

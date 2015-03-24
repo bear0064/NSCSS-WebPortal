@@ -271,7 +271,7 @@ form {
     margin: 0 auto;
 }
 
-.searchFeild {
+.searchField {
     width: 150px;
     padding: 4px 10px;
     background: rgba(50, 50, 50, 0);
@@ -291,11 +291,17 @@ form {
     background-size: 40px;
     background-repeat: no-repeat;
     background-position: center;
+    outline:none;
 }
 
 .searchButton:hover {
     background-color: #c6d6d9;
 }
+
+.searchButton:focus {
+    
+}
+
 
 .infoBody {
     padding-left: 291px;
@@ -385,6 +391,7 @@ img#serviceimg {
 
 
 #ajaxSpinnerImage{
+    
     display: block;
     margin-left: auto;
     margin-right: auto;

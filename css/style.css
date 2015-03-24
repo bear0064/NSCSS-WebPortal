@@ -545,7 +545,7 @@ form {
   width: 250px;
   margin: 0 auto; }
 
-.searchFeild {
+.searchField {
   width: 150px;
   padding: 4px 10px;
   background: rgba(50, 50, 50, 0);
@@ -563,7 +563,8 @@ form {
   background-image: url(../img/search.svg);
   background-size: 40px;
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  outline: none; }
 
 .searchButton:hover {
   background-color: #c6d6d9; }
