@@ -632,7 +632,15 @@ img#serviceimg {
 #ajaxSpinnerImage {
   display: block;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 60px; }
+
+#datepicker {
+  display: none;
+  margin: 0 auto; }
+
+#calCont {
+  text-align: center; }
 
 /* = Grid
 -------------------------------------------------------------------------------------------------------------------- */

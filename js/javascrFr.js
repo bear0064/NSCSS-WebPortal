@@ -288,64 +288,47 @@ function displaySrv(event) {
         
     }
 
-
     if (info[0].monday_start !== null && info[0].monday_end !== null) {
-        q += "<p>Monday: " + info[0].monday_start.hours + ":" + info[0].monday_start.minutes + " - " + info[0].monday_end.hours + ":" + info[0].monday_end.minutes + "</p>";
+        q += "<p>Monday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].monday_start) + " - " + getTime(info[0].monday_end) + "</p>";
     } else {
 
     }
 
 
     if (info[0].tuesday_start !== null && info[0].tuesday_end !== null) {
-        q += "<p>Tuesday: " + info[0].tuesday_start.hours + ":" +
-            info[0].tuesday_start.minutes + " - " +
-            info[0].tuesday_end.hours + ":" +
-            info[0].tuesday_end.minutes + "</p>";
+        q += "<p>Tuesday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].tuesday_start) + " - " +
+            getTime(info[0].tuesday_end) + "</p>";
     } else {
 
     };
     if (info[0].wednesday_start !== null && info[0].wednesday_end !== null) {
-        q += "<p>Wednesday: " + info[0].wednesday_start.hours + ":" +
-            info[0].wednesday_start.minutes + " - " +
-            info[0].wednesday_end.hours + ":" +
-            info[0].wednesday_end.minutes + "</p>";
+        q += "<p>Wednesday: &nbsp;" + getTime(info[0].wednesday_start) + " - " + getTime(info[0].wednesday_end) + "</p>";
     } else {
 
     };
     if (info[0].thursday_start !== null && info[0].thursday_end !== null) {
-        q += "<p>Thursday: " + info[0].thursday_start.hours + ":" +
-            info[0].thursday_start.minutes + " - " +
-            info[0].thursday_end.hours + ":" +
-            info[0].thursday_end.minutes + "</p>";
+        q += "<p>Thursday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].thursday_start) + " - " + getTime(info[0].thursday_end) + "</p>";
     } else {
 
     };
     if (info[0].friday_start !== null && info[0].friday_end !== null) {
 
-        q += "<p>Friday: " + info[0].friday_start.hours + ":" +
-            info[0].friday_start.minutes + " - " +
-            info[0].friday_end.hours + ":" +
-            info[0].friday_end.minutes + "</p>";
+        q += "<p>Friday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].friday_start) + " - " + getTime(info[0].friday_end) +  "</p>";
     } else {
 
     };
     if (info[0].saturday_start !== null && info[0].saturday_end !== null) {
-        q += "<p>Saturday: " + info[0].saturday_start.hours + ":" +
-            info[0].saturday_start.minutes + " - " +
-            info[0].saturday_end.hours + ":" +
-            info[0].saturday_end.minutes + "</p>";
+        q += "<p>Saturday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].saturday_start) + " - " + getTime(info[0].saturday_end) +  "</p>";
     } else {
 
     }
     if (info[0].sunday_start !== null && info[0].sunday_end !== null) {
-        q += "<p>Sunday: " + info[0].sunday_start.hours + ":" +
-            info[0].sunday_start.minutes + " - " +
-            info[0].sunday_end.hours + ":" +
-            info[0].sunday_end.minutes + "</p>";
+        q += "<p>Sunday: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + getTime(info[0].sunday_start) + " - " + getTime(info[0].sunday_end) + "</p>";
     } else {
 
     }
-
+    
+    
     if (info[0].monday_start !== null || info[0].tuesday_start !== null || info[0].wednesday_start !== null || info[0].thursday_start !== null || info[0].fridayday_start !== null || info[0].saturdayday_start !== null || info[0].sunday_start !== null) {
         q += "</div>";
     } else {
@@ -370,7 +353,7 @@ function displaySrv(event) {
     q += "</div>";
 
 
-    if (info[0].address_line1 !== "" || info[0].address_line2 !== "") {
+    if (info[0].address_line1 !== "" && info[0].address_line1 !== null || info[0].address_line2 !== ""  && info[0].address_line2 !== null) {
         q += "<div id='address'>";
         q += "<h3>Address: </h3>";
     } else {}
@@ -433,6 +416,25 @@ function getOrganization() {
 }
 
 
+function getTime(obj) {
+	var hours = obj.hours;
+	var mins = obj.minutes;
+	var im = parseInt(mins);
+	var ih = parseInt(hours);
+	if(ih<12) {
+		ap = " AM";
+	} else {
+		ap = " PM";
+	}
+	if(ih >12) {
+		ih -=12;
+	}
+	if(im <10)
+		return ih + ":0" + im + ap;
+	else
+		return ih + ":" + im + ap;
+
+}
 
 
 
