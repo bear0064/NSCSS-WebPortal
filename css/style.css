@@ -770,10 +770,9 @@ img#serviceimg {
     float: left; }
 
   #hop {
-    display: block;
-    float: left;
     padding: 15px;
-    margin-left: 17px; }
+    margin-left: 17px;
+    clear: left; }
 
   #address {
     display: block;

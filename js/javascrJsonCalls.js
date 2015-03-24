@@ -11,38 +11,38 @@ $(document).ready(function () {
     //listen for ready    
     
     
-   
-    $('.searchField').keyup(function(event) {
-        if (event.keyCode == 13) {
-        searchValue = $(this).val();
-        $(this).val('');
-    
-        $(".serviceHeader").empty();
-        $(".loaded").empty();
-        searchFunc();
-         }
-    });
-
-    
-    
-    
-    
-
 $(function() {
 dateString = $.datepicker.formatDate( "mm/dd/yy", $( "#datepicker" ).datepicker( "getDate" ) )        
 });
 
     
+
+    
     
     $(".searchButton").click(function (event) {
-        event.preventDefault();
-    searchValue = $('.searchFeild').val();
+            event.preventDefault();
+        
+        
+        if ( $('.searchField').val() != '' || $('.searchField').val().length != 0){
+            searchValue = $('.searchField').val();
         $('.searchField').val('');
     
         $(".serviceHeader").empty();
         $(".loaded").empty();
         searchFunc();
+        
+        } else {
+            
+        $(".serviceHeader").empty();
+        $(".loaded").empty();
+            
+             var q = "";
+                q += "<h1 id='serviceHead'>Search field cannot be empty!</h1>";    
+                document.querySelector(".loaded").innerHTML += q;
 
+        }
+        
+    
     });
     
     
@@ -142,6 +142,14 @@ function displayRes() {
 
     $(".loaded").empty();
 
+    if(data.length <= 0) {
+       var q = "";
+
+                q += "<h1 id='serviceHead'>Sorry, no results availiable.</h1>";    
+                
+                document.querySelector(".loaded").innerHTML += q;
+    }
+    
     for (var i = 0; i < data.length; i++) {
 
         var s = "";
@@ -375,7 +383,7 @@ q += "<p>"  + getTime(info[0].start_time) + " - " + getTime(info[0].end_time) + 
 
 
 function sendQry() {
-    var qry = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&-sort=name_en+asc&categories=%3D" + categoryId + "&communities=%3D" + communityId + "&-action=export_json";
+    var qry = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&-sort=name_en+asc&categories=%3D" + categoryId + "&communities=%3D" + communityId + "&-limit=200&-action=export_json";
 
     
     $(document).ajaxStart(function () {
@@ -440,7 +448,7 @@ function sendQryOrg() {
 
 function getService() {
 
-    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&program_id=" + selectedServ + "&-action=export_json"
+    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&program_id=" + selectedServ + "&-limit=200&-action=export_json"
 
 
     var request = $.ajax({
@@ -469,20 +477,20 @@ function getService() {
 function getOrganization() {
 
     
-        $(document).ajaxStart(function () {
-
-            $("#ajaxSpinnerImage").remove();
-
-            $('.infoBody').append("<img src='img/ajax-loader.gif' id='ajaxSpinnerImage'/></img>");
-            $('#ajaxSpinnerImage').show();
-
-        })
-        .ajaxStop(function () {
-            $('#ajaxSpinnerImage').hide();
-
-        });    
+//        beforeSend:function(){(function () {
+//
+//            $("#ajaxSpinnerImage").remove();
+//
+//            $('.infoBody').append("<img src='img/ajax-loader.gif' id='ajaxSpinnerImage'/></img>");
+//            $('#ajaxSpinnerImage').show();
+//
+//        })
+//        .ajaxStop(function () {
+//            $('#ajaxSpinnerImage').hide();
+//
+//        });    
     
-    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&org_id=" + selectedServ + "&-action=export_json"
+    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=programs&org_id=" + selectedServ + "&-limit=200&-action=export_json"
 
 
     var request = $.ajax({
@@ -514,7 +522,8 @@ function getOrganization() {
 
 function getEvent() {
 
-    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=new_events&event_id=1513&-action=export_json";
+    var qryServ = "http://www.nscss.com/EAConnects/admin/index.php?-table=new_events&event_id="+ selectedServ+"&-limit=200&-action=export_json";
+
 
 
     var request = $.ajax({
