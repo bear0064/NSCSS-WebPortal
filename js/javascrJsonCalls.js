@@ -36,6 +36,7 @@ $(document).ready(function () {
 
             $(".serviceHeader").empty();
             $(".loaded").empty();
+            categoryId = 18;
             searchFunc();
 
         } else {
@@ -183,10 +184,13 @@ function displayRes() {
 
             s += "<div class='listData' data-ref='" + data[i].event_id + "'>";
 
+        } else if (!data[0].org_id && data[0].program_id) {
+
+            s += "<div class='listData' data-ref='" + data[i].program_id + "'>";
+
         } else {
-
             s += "<div class='listData' data-ref='" + data[i].org_id + "'>";
-
+            
         }
 
 
@@ -221,8 +225,14 @@ function displayRes() {
             console.log('Event ' + selectedServ);
             getEvent();
 
-        } else {
+        } else if (!data[0].event_id && !data[0].org_id && data[0].program_id) {
+            
+            selectedServ = $(this).attr("data-ref");
+            console.log('Org ' + selectedServ);
+            getService();
 
+        } else {
+            
             selectedServ = $(this).attr("data-ref");
             console.log('Org ' + selectedServ);
             getOrganization();
