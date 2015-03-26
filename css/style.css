@@ -1016,7 +1016,10 @@ body {
   height: 100%; }
 
 .push {
-  padding-top: 70px; }
+  display: block;
+  clear: left;
+  padding-top: 70px;
+  margin: 15px; }
 
 #footer {
   display: none;

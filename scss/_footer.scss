@@ -8,7 +8,11 @@ body {
 }
 
 .push {
-    padding-top: 70px;
+  display: block;
+  clear: left;
+  padding-top: 70px;
+  margin: 15px;
+
 }
 
 #footer {
