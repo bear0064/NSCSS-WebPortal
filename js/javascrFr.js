@@ -58,7 +58,7 @@ dateString = $.datepicker.formatDate( "mm/dd/yy", $( "#datepicker" ).datepicker(
 
         communityId = $(this).attr("data-community");
 
-
+        $("#footer").show();
         $("#main-nav").show();
         $("#main").animate({
             "left": "250px"
