@@ -410,6 +410,9 @@ body {
 a {
   text-decoration: none; }
 
+a:visited {
+  color: green; }
+
 a:link {
   color: green; }
 
@@ -1005,6 +1008,32 @@ nav {
     left: 0; } }
 /* = Footer
 -------------------------------------------------------------------------------------------------------------------- */
+* {
+  margin: 0; }
+
+html,
+body {
+  height: 100%; }
+
+.push {
+  padding-top: 70px; }
+
+#footer {
+  display: none;
+  height: 70px;
+  /* .push must be the same height as .footer */
+  background: #c6d6d9;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1; }
+
+img.logoBottom {
+  cursor: pointer;
+  height: 55px;
+  float: right;
+  padding: 16px 7px 0 0; }
+
 /* = Print
 -------------------------------------------------------------------------------------------------------------------- */
 @media print {

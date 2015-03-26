@@ -67,7 +67,7 @@ $(document).ready(function () {
 
         communityId = $(this).attr("data-community");
 
-
+        $("#footer").show();
         $("#main-nav").show();
         $("#main").animate({
             "left": "250px"
